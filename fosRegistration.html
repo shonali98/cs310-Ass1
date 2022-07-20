@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOS-Student Registraion Form</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+<body>
+    <header id="header">
+        <div><img src="logo.png" alt="" width="50px" height="50px"></div>
+        <div>Faculty Of Science</div>
+    </header>
+    <section id="form-section">
+        
+        <h1>Student Registration</h1>
+        <form action="https://formsubmit.co/shonalinethmika998@gmail.com" method="POST" id="form" name="formid" novalidate >
+        
+
+            <div class="form-first">
+            
+                
+                <div class="details personal-information">
+                    
+                     <span class="title"> <h3><i class="fa-solid fa-circle-info"></i>  Personal Information</h3></span>
+                    </br>
+                    <div class="field">
+                        
+                        <label for="fullName">Name with initials</label>
+                        </br>
+                        <input type="text" placeholder=" Enter your Name " name="fullName" id="name" required pattern="[A-Za-z]{0,50}"  ></br>
+                        <span class="nameerror" > please enter alphabets only   </span>
+                        </br>
+                        <label for="gender">Gender</label>
+                        </br>
+                        <select name="gender" id="gender" required>
+                            <option value="none" selected>Select your Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        </br>
+                        <label for="birthday">Date Of Birth</label>
+                        </br>
+                        <input type="date" placeholder="Date of Birth" name="birthday" id="birthday" required>
+                        </br>
+                        <label for="nic">NIC</label>
+                        </br>
+                        <input type="number" placeholder=" Enter your NIC number" name="NIC" id="nic"  required></br>
+                        <span class="nicerror" > please enter numbers only   </span>
+                        </br>
+                        <label for="Address">Address</label>
+                        </br>
+                        <input type="text" name="street" placeholder="Enter your street" id="address" required>
+                        </br>
+                        <input type="text" name="city" placeholder="Enter your city" id="address" required>
+                        </br>
+                        <input type="text" name="zip" placeholder="Enter Zipcode" id="address" required>
+                        </br>
+                        <label for="telephone">Telephone</label>
+                        </br>
+                        <input type="number" name="telephone" placeholder="Enter Telephone Number" id="telephone" maxlength="10" size="10"  required >    
+                        </br>
+                        <span class="teplephoneerror" > please enter numbers only   </span></br>
+                        <label for="zscore">Z Score</label>
+                        </br>
+                        <input type="number" name="z score" placeholder="Enter your Z score " id="zscore" required step="any">
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="details course-information">
+                    
+                     <span class="title"><h3><i class="fa-solid fa-graduation-cap"></i> Course Information</h3></span>
+                
+                     <div class="field field2">
+                        <label for="course-selected">Course Selected</label>
+                        </br>
+                        <select id="course" name="course" onchange="getCourse()" required>
+                            <option value="none" selected>Select your Course</option>
+                            <option value="Biological Science stream">Biological Science stream</option>
+                            <option value="Physical Science stream">Physical Science stream</option>
+                            <option value="CM">CM</option>
+                            <option value="SOR">SOR</option>
+                        </select>
+                        </br>
+                        <label for="subjects" id="subjects">Subjects</label></br>
+                        <input type="text" name="" id="value">
+                        <div id="mycheckboxCM" style="display: none;" >
+                            Select five Subjects</br></br>
+                            
+                            <input type="checkbox" name="sub1" class="check" value="Computer Science"  >Computer Science I<br> 
+                            <input type="checkbox" name="sub2" class="check" value="Computer Science"  >Computer Science II<br> 
+                            <input type="checkbox" name="sub3" class="check" value="Computer Science"  >Computer Science III<br>      
+                            <input type="checkbox" name="sub4" class="check" value="Mathematics">Mathematics I<br> 
+                            <input type="checkbox" name="sub5" class="check" value="Mathematics">Mathematics II<br> 
+                            <input type="checkbox" name="sub6" class="check" value="Mathematics">Mathematics III<br> 
+                            <input type="checkbox" name="sub7" class="check" value="Managements">Management I<br>  
+                            <input type="checkbox" name="sub8" class="check" value="Managements">Management II<br>  
+                            <input type="checkbox" name="sub9" class="check" value="Managements">Management III<br>  
+
+                        </div>
+
+                        <div id="mycheckboxBio" style="display: none;" >
+                            Select five Subjects</br></br>
+                            <input type="checkbox" name="sub1" class="check" value="Computer Science"  >Biology I<br> 
+                            <input type="checkbox" name="sub2" class="check" value="Computer Science"  >Biology II<br> 
+                            <input type="checkbox" name="sub3" class="check" value="Computer Science"  >Biology III<br>      
+                            <input type="checkbox" name="sub4" class="check" value="Mathematics">Mathematics I<br> 
+                            <input type="checkbox" name="sub5" class="check" value="Mathematics">Mathematics II<br> 
+                            <input type="checkbox" name="sub6" class="check" value="Mathematics">Mathematics III<br> 
+                            <input type="checkbox" name="sub7" class="check" value="Managements">Chemistry I<br>  
+                            <input type="checkbox" name="sub8" class="check" value="Managements">Chemistry II<br>  
+                            <input type="checkbox" name="sub9" class="check" value="Managements">Chemistry III<br>  
+
+                        </div>
+
+                        <div id="mycheckboxPhy" style="display: none;" >
+                            Select five Subjects</br></br>
+                            <input type="checkbox" name="sub1" class="check" value="Computer Science" >General chemistry<br> 
+                            <input type="checkbox" name="sub2" class="check" value="Computer Science"  >geological sciences<br> 
+                            <input type="checkbox" name="sub3" class="check" value="Computer Science"  >Introduction to human genetics<br>      
+                            <input type="checkbox" name="sub4" class="check" value="Mathematics">Mathematics I<br> 
+                            <input type="checkbox" name="sub5" class="check" value="Mathematics">Mathematics II<br> 
+                            <input type="checkbox" name="sub6" class="check" value="Mathematics">Mathematics III<br> 
+                            <input type="checkbox" name="sub7" class="check" value="Managements">Quantitative research and analysis<br>  
+                            <input type="checkbox" name="sub8" class="check" value="Managements">Calculus<br>  
+                            <input type="checkbox" name="sub9" class="check" value="Managements">Electronics for scientists<br>  
+
+                        </div>
+
+                        <div id="mycheckboxSOR " style="display: none;" >
+                            Select five Subjects</br></br>
+                            <input type="checkbox" name="sub1" class="check" value="Computer Science" required >Computer Science I<br> 
+                            <input type="checkbox" name="sub2" class="check" value="Computer Science" required >Computer Science II<br>     
+                            <input type="checkbox" name="sub3" class="check" value="Mathematics">Mathematics I<br> 
+                            <input type="checkbox" name="sub4" class="check" value="Mathematics">Mathematics II<br>
+                            <input type="checkbox" name="sub5" class="check" value="Managements">Statistics I <br>  
+                            <input type="checkbox" name="sub6" class="check" value="Managements">Statistics II<br>  
+                            <input type="checkbox" name="sub7" class="check" value="Managements">Statistics III<br>  
+                            <input type="checkbox" name="sub8" class="check" value="Computer Science" required >Management<br> 
+
+                        </div>
+                        
+                     </div>
+                    </br>
+                    <button type="submit" id="submit" disabled onclick="thank()">Submit</button>
+
+                    
+              
+                    </div>
+                    
+            </div>
+                      
+        </form>
+    </section>
+    <section id="Thank" >
+        <div class="thank">
+            <h1>Thank You for Registration</h1>
+            
+            <h4>All The best your Future</h4>
+        </div>
+    </section>
+
+    <footer>
+        
+        <div class="footer">
+            <h4>Created By :- H.P.S. Nethmika</h4>
+           <a href="https://github.com/shonali98"><img src="github.png" alt="" height="50px" width="50px"></a>
+           <a href="https://www.linkedin.com/in/shonali-nethmika-4984a6207/"><img src="linkedin.png" alt=""height="50px" width="50px"></a>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

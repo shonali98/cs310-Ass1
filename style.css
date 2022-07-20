@@ -1,0 +1,159 @@
+body{
+    
+    background:linear-gradient(to right,  #171817d2,rgba(49, 59, 36, 0.267)),
+                url(backgroud.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+#header {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    background-color:#e9a300;
+    padding:10px ;
+    font-size: 2rem;
+    color: rgb(82, 2, 2);
+    font-weight:bold;
+    margin:-1%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+    
+}
+header div{
+    padding: 10px;  
+}
+
+#form-section{
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+#form{
+    display: flex;
+    justify-content: center;
+    background-color: #ebe99dec;
+    margin: 10px;
+    padding: 20px; 
+      
+}
+.form-first{
+    display:flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-left: 30px;
+    
+
+}
+.details{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.title{
+    font-size:1rem;
+    
+}
+.course-information .field{
+    margin-top: 20%;
+}
+#form .details label{
+    line-height:3;
+    font-weight: bold;
+    color: rgb(80, 40, 2);
+}
+#form .details input,select{
+    width: auto;
+    background: #e9a30059;
+    
+    
+}
+#form .details input::placeholder{
+    color: black;
+}
+.title{
+    color: black;
+}
+#form-section h1{
+    font-size: 2rem;
+    color: white;
+}
+
+#mycheckbox{
+    all: none;
+}
+#submit{
+    padding: 10px;
+    width: 50%;
+    margin-left: 20%;
+    border-radius: 20px;
+    background: rgba(165, 126, 42, 0.445);
+}
+#submit:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+    color: black;
+}
+
+.footer{
+    margin:-1%;
+    background-color:#e9a300;
+    height: 15vh;
+    text-align: center;
+    padding-top: 5px;
+    bottom: 0%;
+    /* position: fixed; */
+    /* width: 100%; */
+}
+.thank{
+    align-items: center;
+    text-align: center;
+    background: #e9a30071;
+    width: 40%;
+    margin-left: 24%;
+    padding: 80px;
+    margin-bottom:5%;
+    margin-top: 10%;
+    
+}
+.thank h1,h2,h4{
+    color: white;
+}
+.thank h1{
+    font-size: 4rem;
+}
+.thank h2{
+    font-size: 2.5rem;
+}
+.thank h4{
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .thank h1{
+        font-size: 2rem;
+    }
+    .thank h2{
+        font-size: 1rem;
+    }
+    .thank h4{
+        font-size: 1rem;
+    }
+    .thank{
+        
+        margin-left: 14%;
+        padding: 80px;
+        margin-bottom:5%;
+        margin-top: 10%;
+        
+    }
+  }
