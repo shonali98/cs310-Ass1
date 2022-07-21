@@ -7,10 +7,15 @@ function getCourse(){
     var checkPhy= document.getElementById("mycheckboxPhy")
     var checkSOR= document.getElementById("mycheckboxSOR")
 
+    var strUser = select.options[select.selectedIndex].value;
 	console.log(select)
-    console.log(option)
-    document.getElementById('value').value=option;
+   console.log(option)
+   document.getElementById('value').value=option;
 
+   if(strUser!="none"){
+      select.style.backgroundColor="rgb(154, 207, 133)";
+      select.style.borderColor="rgb(11, 66, 11) solid 3px";
+      }
     switch(option){
         case "CM":
            checkCM.style.display="block";
@@ -27,6 +32,7 @@ function getCourse(){
         default:
 
     }
+   
 }
 
 //check fill all details
@@ -113,18 +119,7 @@ function thank(){
    // alert("thank");
 }
 
-const selectCourse=document.getElementById('course')
 
-function show(){
-   var as = document.forms[0].course.value;
-   var strUser = selectCourse.options[selectCourse.selectedIndex].value;
-   if(strUser!="none"){
-      selectCourse.style.backgroundColor="rgb(154, 207, 133)";
-      selectCourse.style.borderColor="rgb(11, 66, 11) solid 3px";
-   }
- }
- selectCourse.onchange=show;
- show();
 
 const selectgender=document.getElementById('gender')
 
