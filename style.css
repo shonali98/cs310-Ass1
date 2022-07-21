@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content: flex-start;
     background-color:#e9a300;
-    padding:10px ;
+    padding:5px ;
     font-size: 2rem;
     color: rgb(82, 2, 2);
     font-weight:bold;
@@ -28,7 +28,8 @@ header div{
 }
 
 #form-section{
-    margin-bottom: 10px;
+    margin-top: 5%;
+    margin-bottom: 5px;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -74,8 +75,30 @@ header div{
     
 }
 #form .details input::placeholder{
-    color: black;
+    color: rgb(92, 88, 88);
 }
+#form .details input,select{
+    border:solid 1px;
+    background-color: rgb(190, 167, 64);
+    
+}
+
+#form .details input:valid{
+    border:rgb(11, 66, 11) solid 1px;
+    background-color: rgb(154, 207, 133);
+    box-shadow: 2px 2px 2px rgb(241, 252, 241)   ;
+    
+}
+
+
+
+/* #form .details input:invalid {
+
+    
+    border: rgba(255, 0, 0, 0.24) solid 2px;
+  } */
+
+
 .title{
     color: black;
 }
@@ -84,15 +107,13 @@ header div{
     color: white;
 }
 
-#mycheckbox{
-    all: none;
-}
+
 #submit{
     padding: 10px;
     width: 50%;
     margin-left: 20%;
     border-radius: 20px;
-    background: rgba(165, 126, 42, 0.445);
+    background-color: rgb(190, 167, 64);
 }
 #submit:hover{
     cursor: pointer;

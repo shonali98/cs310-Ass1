@@ -42,6 +42,7 @@ const zscore1 =document.getElementById('zscore');
 const course1 =document.getElementById('course');
 
 
+
 function setSubmitBtn(){
    const name1Value=name1.value.trim();
    const gender1Value=gender1.value.trim();
@@ -61,7 +62,9 @@ function setSubmitBtn(){
       && zscore1Value.length>0
       && courseValue != "none"
       ){
+      
       submitbtn.removeAttribute('disabled')
+      
 
    }
    else{
@@ -69,6 +72,8 @@ function setSubmitBtn(){
       submitbtn.setAttribute('disabled')
       
    }
+
+   
 }
 name1.addEventListener('change',setSubmitBtn);
 gender1.addEventListener('change',setSubmitBtn);
@@ -107,3 +112,29 @@ function thank(){
    location.href='Thank';
    // alert("thank");
 }
+
+const selectCourse=document.getElementById('course')
+
+function show(){
+   var as = document.forms[0].course.value;
+   var strUser = selectCourse.options[selectCourse.selectedIndex].value;
+   if(strUser!="none"){
+      selectCourse.style.backgroundColor="rgb(154, 207, 133)";
+      selectCourse.style.borderColor="rgb(11, 66, 11) solid 3px";
+   }
+ }
+ selectCourse.onchange=show;
+ show();
+
+const selectgender=document.getElementById('gender')
+
+function show1(){
+   var as = document.forms[0].course.value;
+   var strUser = selectgender.options[selectgender.selectedIndex].value;
+   if(strUser!="none"){
+      selectgender.style.backgroundColor="rgb(154, 207, 133)";
+      selectgender.style.borderColor="rgb(11, 66, 11) solid 3px";
+   }
+ }
+ selectgender.onchange=show1;
+ show1();
